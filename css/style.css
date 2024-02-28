@@ -1,0 +1,957 @@
+/*
+Ce fichier fait partie du projet "NSImétéo" et est distribué sous la licence GPL v3+.
+Veuillez consulter le fichier LICENSE pour plus d'informations sur la licence.
+Le projet "NSImétéo" est aussi distribué sous la licence Creative Commons Attribution-ShareAlike (CC BY-SA). 
+Pour plus d'informations sur cette licence, veuillez consulter le lien suivant : https://creativecommons.org/licenses/by-sa/4.0/.
+*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+body{
+	background-color:#222222;
+	color: black;
+	font-family: "Segoe UI", Verdana, serif;
+	font-size:12pt;
+	margin:0;
+	padding:0;
+	position:relative;
+}
+
+
+/********/
+/*Header*/
+/********/
+
+#header{
+	width:100%;
+	height:160px;
+	background-color:#1a78b7;
+	padding-bottom:20px;
+	position:relative;
+	border-bottom:solid #1a78b7 15px;	
+}
+
+#entete{
+	margin:auto;
+	width:1050px;
+	height:230px;
+}
+
+/* Banniere */
+#banniere{
+	float:left;
+	padding-left:20%;
+	position:relative;
+	top:50%;
+	margin-top:-70px;
+}
+
+/******/
+/*Menu*/
+/******/
+
+.menu{
+	width:100%;
+	height:50px;
+	background-color:#1a78b7;
+	padding-bottom:20px;
+	box-shadow:0 0 20px #1a78b7;
+	position:relative;
+}
+
+.menu nav{
+	display:flex;
+	justify-content: space-between;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.menu li{
+	font-size:30px;
+	list-style:none;
+}
+
+.menu a{
+	color:white;
+}
+
+.menu a:hover{
+	color:black;
+	font-weight:700;
+}
+
+.accueil-title{
+	font-weight:500;
+}
+
+
+/*******/
+/*Corps*/
+/*******/
+
+.corps{
+	float:left;
+	width: 100%;
+	background-color:#EDEDED;
+}
+
+.texte{
+	width: 100%;
+	min-height:650px;
+	color:#222222;
+}
+
+.texte h1{
+	text-shadow:1px 1px 2px #333333;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-size: 30px;
+}
+
+.texte h2{
+	padding-left: 10%;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-size: 25px;
+}
+
+.ligne{
+	margin-right: auto;
+	margin-left: auto;
+	height: 2px;
+	background-color: black;
+}
+
+.grande-ligne{
+	margin-right: auto;
+	margin-left: auto;
+	width: 600px;
+	height: 2px;
+	background-color: black;
+}
+
+.petit-ligne{
+	margin-left: 10%;
+	width: 100px;
+	height: 2px;
+	background-color: black;
+}
+
+.gras{
+	font-weight: bold;
+}
+
+.bouton{ 
+	border:2px #AAAAAA solid;
+	background-color:#444444; 
+	font-size:12pt;
+    	font-weight:bold;
+    	font-family:Verdana, Arial, sans-serif; 
+    	color:#FFFFFF; 
+    	width:125px;
+    	height:40px;
+    	border-radius:10px;
+    	cursor:pointer;
+}
+
+.bouton:hover{ 
+	box-shadow:0 0 2px #000000;	
+	background-color:#555555; 
+}
+
+/*Accueil*/
+
+.intro{
+	text-align: justify;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.accueil hr{
+	height: 2px;
+	background-color: black;
+
+}
+
+.accueil nav{
+	display:flex;
+	justify-content: space-between;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.info-achat{
+	text-align: center;
+	font-size:15px;
+	list-style:none;
+}
+
+
+/*Meteo*/
+
+.meteo{
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.meteo p{
+    font-size: 20px;
+}
+
+.meteo .ligne{
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+
+.meteo .bouton{
+	margin-top: 10px;
+    width:230px;
+}
+
+.meteo .bouton-telechargement:hover{ 
+	box-shadow:0 0 2px #000000;
+	background-color:#555555;
+}
+
+.chosemeteo p{
+	font-size: large;
+	font-weight: bold;
+}
+
+.champ-meteo{
+	width:100%;
+	background-color:#E0E0E0;
+	padding:5px;
+	font-size:12pt;
+   	min-height:25px;
+	max-width: 500px;
+   	border-radius:10px;	
+   	border:1px #222222 solid;
+	box-shadow:1px 1px 3px #000000 inset;
+}
+
+.meteo hr {
+	margin-bottom: 30px;
+}
+
+.meteo-image{
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.meteo table{
+	border-collapse: collapse;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.meteo td, .meteo th{
+	text-align: center;
+	border: solid 2px;
+	width: 270px;
+	margin-bottom: 20px;
+}
+
+.meteo h2{
+    padding-left: 0px;
+}
+
+
+/*Produit*/
+
+.produit-menu{
+	display:flex;
+	justify-content: space-between;
+	padding-top: 10px;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.produit-menu p{
+	text-shadow:1px 1px 2px #333333;
+	text-align: center;
+	color: #000000;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-size: 30px;
+}
+
+.produit-menu a:hover{
+	font-weight:700;
+}
+
+.produit hr{
+	height: 2px;
+	background-color: black;
+}
+
+.liste-produit{
+	display: flex;
+	flex-direction: row;
+}
+
+.liste-produit img{
+	margin: 20px;
+	margin-left: 5%;
+	margin-right: 5%;
+	
+}
+
+.info-produit{
+	margin-top: 5%;
+	margin-right: 14%;
+}
+
+p.desc{
+	margin-bottom: 10px;
+}
+
+.info-produit h2{
+	text-align: center;
+	margin-right: 14%;
+}
+
+ul.liste-info-produit{
+	display:flex;
+	justify-content: space-between;
+	margin-right: 10%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+ul.liste-label-produit{
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+ul.liste-label-produit p{
+	font-weight: bold;
+	margin: 10px;
+	border:3px #000000 solid;
+    border-radius:10px;
+	color: #FFFFFF;
+	font-family:Verdana, Arial, sans-serif; 
+}
+
+p.label-nouveau-produit{
+	background-color: #0d850d;
+}
+
+p.label-editionlimitee-produit{
+	background-color: #7616b6;
+}
+
+p.label-rupture-produit{
+	background-color: #c52020;
+}
+
+
+.bouton-achat{
+	border:2px #AAAAAA solid;
+	background-color:#444444; 
+	font-size:12pt;
+    	font-weight:bold;
+    	font-family:Verdana, Arial, sans-serif; 
+    	color:#FFFFFF; 
+    	width:125px;
+    	height:40px;
+    	border-radius:10px;
+    	cursor:pointer;
+	margin-right: 20px;
+	float:right;
+}
+
+.bouton-achat:hover{
+	background-color:#222222;
+}
+
+.quantitee-achat{
+	border:2px #AAAAAA solid;
+	background-color:#444444;
+	font-size:12pt;
+		font-weight:bold;
+		font-family:Verdana, Arial, sans-serif; 
+		color:#FFFFFF; 
+		width:125px;
+		height:30px;
+		border-radius:10px;
+		cursor:pointer;
+}
+
+.quantitee-achat:hover{
+	background-color:#222222;
+}
+
+.info-produit label{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+/*Commande*/
+
+.commande{
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.commande p{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+
+.commande .bouton{
+	margin-top: 20px;
+	width:155px;
+}
+
+/*Connexion*/
+
+.connexion{
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.connexion p{
+	font-weight: bold;
+	text-align: justify;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	font-size:15pt;
+}
+
+.connexion p.champsobligatoires{
+	font-weight:normal;
+	font-style: italic;
+	font-size:10pt;
+}
+
+.form-group{
+	margin-bottom:11px;
+	display:flex;
+	width:100%
+}
+
+
+.champ-inscription{
+	width:100%;
+	background-color:#E0E0E0;
+	margin:0px 30px 10px 30px;
+	padding:5px;
+	font-size:12pt;
+   	min-height:25px;
+   	border-radius:10px;	
+   	border:1px #222222 solid;
+	box-shadow:1px 1px 3px #000000 inset;
+}
+
+.champ-connexion{
+	width:30%;
+	background-color:#E0E0E0;
+	margin:0px 30px 10px 30px;
+	padding:10px;
+	font-size:12pt;
+   	min-height:30px;
+   	border-radius:20px;	
+   	border:1px #222222 solid;
+	box-shadow:1px 1px 3px #000000 inset;
+	margin-bottom: 20px;
+}
+
+.champ-inscription:focus .champ-connexion:focus{
+	box-shadow:1px 1px 5px #000000 inset;
+}
+
+.formbouton{
+	border:2px #AAAAAA solid;
+	background-color:#444444; 
+	font-size:12pt;
+		font-weight:bold;
+		font-family:Verdana, Arial, sans-serif; 
+		color:#FFFFFF; 
+		width:125px;
+		height:40px;
+		border-radius:10px;
+		cursor:pointer;
+	margin-right: 20px;
+}
+
+.erreur-connexion{
+	color: #c52020;
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+/*Contact*/
+
+.champ-contact{
+	width:100%;
+	background-color:#E0E0E0;
+	margin:0px 30px 10px 30px;
+	padding:5px;
+	font-size:12pt;
+   	min-height:25px;
+   	border-radius:10px;	
+   	border:1px #222222 solid;
+	box-shadow:1px 1px 3px #000000 inset;
+}
+
+form.contact-form {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+form.contact-form h1{
+	padding-bottom: 20px;
+}
+
+form.contact-form textarea.champ-contact{
+	resize: none;
+	height: 300px;
+}
+
+/*Espace Client*/
+
+.esp-client-menu{
+	display:flex;
+	justify-content: space-between;
+	padding-top: 10px;
+	padding-left: 18%;
+	padding-right: 18%;
+}
+
+.esp-client-menu p{
+	text-shadow:1px 1px 2px #333333;
+	text-align: center;
+	color: #000000;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-size: 30px;
+}
+
+.esp-client-menu a:hover{
+	font-weight:700;
+}
+
+.esp-client hr{
+	height: 2px;
+	background-color: black;
+}
+
+.esp-client .bouton{
+	margin-right: 20px;
+	float:right;
+}
+
+.vert{
+	background-color: green;
+}
+
+.rouge{
+	background-color: red;
+}
+
+.bleu{
+	background-color: blue;
+}
+
+.orange{
+	background-color: orange;
+}
+
+ul.liste-label-commande{
+	display:flex;
+	justify-content: space-between;
+	margin-right: 20%;
+	margin-left: 20%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+ul.liste-label-commande p{
+	font-weight: bold;
+	margin: 10px;
+	border:3px #000000 solid;
+    border-radius:10px;
+	color: #FFFFFF;
+	font-family:Verdana, Arial, sans-serif; 
+}
+
+ul.liste-label-commande p:hover{
+	box-shadow:1px 1px 5px #000000;
+}
+
+
+.info-client{
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.info-client p{
+	font-weight: bold;
+	text-align: justify;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+	font-size:15pt;
+}
+
+.champ-mondification{
+	width:25%;
+	background-color:#E0E0E0;
+	margin:0px 40px 10px 40px;
+	padding:5px;
+	font-size:12pt;
+   	min-height:25px;
+   	border-radius:10px;	
+   	border:1px #222222 solid;
+	box-shadow:1px 1px 3px #000000 inset;
+}
+
+p.erreur-mdp{
+	margin-top: 15px;
+	text-align: center;
+	color: red;
+}
+
+p.modif-succes{
+	margin-top: 15px;
+	text-align: center;
+	color: green;
+}
+
+
+/*Admin*/
+
+.admin-menu{
+	display:flex;
+	justify-content: space-between;
+	padding-top: 10px;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.admin-menu p{
+	text-shadow:1px 1px 2px #333333;
+	text-align: center;
+	color: #000000;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-size: 30px;
+}
+
+.admin-menu a:hover{
+	font-weight:700;
+}
+
+.admin .grande-ligne{
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.admin hr{
+	height: 2px;
+	background-color: black;
+}
+
+.admin ul.admin-liste-client{
+	display:flex;
+	justify-content: space-between;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.admin-client{
+	text-align: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.admin-client .info-client-form{
+	text-align: center;
+}
+
+.admin-client p{
+	padding-bottom: 20px;
+}
+
+.admin-client label{
+	font-weight: bold;
+}
+
+.admin-client table{
+	border-collapse: collapse;
+	margin-bottom: 10px;
+	margin: 0 auto;
+}
+
+.admin-client td, .admin-client th{
+	text-align: center;
+	border: solid 2px;
+	width: 270px;
+}
+
+.admin-client .partie-tableau-id{
+	width: 60px;
+}
+
+.admin-client .partie-tableau-tel{
+	width: 100px;
+}
+
+.admin .info-produit{
+	margin-top: 2%;
+}
+
+.admin .info-produit .formbouton{
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.admin .liste-type{
+	display: flex;
+	flex-direction: row;
+}
+
+.admin .liste-type img{
+	display: flex;
+	flex-direction: row;
+}
+
+.admin .liste-type{
+	margin: 20px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.admin .info-type{
+	margin-top: 5%;
+	margin-right: 14%;
+	margin-left: 8%;
+}
+
+.admin .info-type h2{
+	text-align: center;
+	margin-right: 14%;
+}
+
+.admin .info-type .formbouton{
+	margin-top: 15px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.champ-admin-modif{
+	width:100%;
+	background-color:#E0E0E0;
+	margin:0px 30px 10px 30px;
+	padding:5px;
+	font-size:12pt;
+   	min-height:25px;
+   	border-radius:10px;	
+   	border:1px #222222 solid;
+	box-shadow:1px 1px 3px #000000 inset;
+}
+
+form.admin-modif-form {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+form.admin-modif-form h1{
+	padding-bottom: 20px;
+}
+
+.admin-ajout-form{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.admin h2{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 23px;
+}
+
+.admin .info-produit{
+	margin-top: 3%;
+}
+
+
+/********/
+/*Footer*/
+/********/
+
+.spacer {  
+  clear: both;
+}
+
+.footer{
+	width:100%;
+	height:50px;
+	color:#CCCCCC;
+	text-align:center;
+}
+
+.footer-background{
+	background-color:#222222;
+	border-top:solid #444444 8px;	
+	box-shadow:0 -5px 5px #858585;
+}
+
+.footer nav{
+	display:flex;
+	justify-content: space-between;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.footer a{
+	color:white;
+	text-decoration:none;
+}
+
+.footer a:hover{
+	font-weight:700;
+}
+
+.footer-menu{
+	padding-top:30px;
+	font-size:30px;
+
+}
+
+.footer img{
+	padding-bottom:20px;
+}
+
+.moyens-de-paiement{
+	padding-top:20px;
+	padding-bottom:20px;
+	font-size:20px;
+}
+
+.phrase-fin{
+	background-color:#000000;
+	font-size:12px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+}
+
+
+/********/
+/*Images*/
+/********/
+
+.img-banniere{
+    width: 610px;
+    height: 140px;
+}
+
+.img-moyens-de-paiement{
+    width: 300px;
+    height: 37px;
+}
+
+.img-meteo{
+    width: 1400px;
+    height: 800px;
+}
+
+.img-produit{
+	width: 450px;
+	height: 400px;
+}
+
+@media screen and (max-width: 1200px) {
+	body{
+		font-size:9pt;
+	}
+
+	#entete{
+		max-width: 100%;
+	}
+
+	.menu nav{
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	.accueil nav{
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	.footer nav{
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.esp-client-menu{
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	body{
+		font-size:6pt;
+	}
+
+	.menu nav{
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	.footer nav{
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+
+	.accueil nav{
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	.esp-client-menu{
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
